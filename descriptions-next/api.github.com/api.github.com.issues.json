@@ -32,7 +32,7 @@
         "tags": [
           "issues"
         ],
-        "operationId": "issues/list",
+        "operationId": "issuesList",
         "externalDocs": {
           "description": "API method documentation",
           "url": "https://docs.github.com/rest/issues/issues#list-issues-assigned-to-the-authenticated-user"
@@ -183,7 +183,7 @@
         "tags": [
           "orgs"
         ],
-        "operationId": "orgs/list-issue-types",
+        "operationId": "orgsListIssueTypes",
         "externalDocs": {
           "description": "API method documentation",
           "url": "https://docs.github.com/rest/orgs/issue-types#list-issue-types-for-an-organization"
@@ -231,7 +231,7 @@
         "tags": [
           "issues"
         ],
-        "operationId": "issues/list-for-org",
+        "operationId": "issuesListForOrg",
         "externalDocs": {
           "description": "API method documentation",
           "url": "https://docs.github.com/rest/issues/issues#list-organization-issues-assigned-to-the-authenticated-user"
@@ -356,7 +356,7 @@
         "tags": [
           "issues"
         ],
-        "operationId": "issues/list-for-repo",
+        "operationId": "issuesListForRepo",
         "externalDocs": {
           "description": "API method documentation",
           "url": "https://docs.github.com/rest/issues/issues#list-repository-issues"
@@ -508,7 +508,7 @@
         "tags": [
           "issues"
         ],
-        "operationId": "issues/list-comments-for-repo",
+        "operationId": "issuesListCommentsForRepo",
         "externalDocs": {
           "description": "API method documentation",
           "url": "https://docs.github.com/rest/issues/comments#list-issue-comments-for-a-repository"
@@ -592,7 +592,7 @@
         "tags": [
           "issues"
         ],
-        "operationId": "issues/get-comment",
+        "operationId": "issuesGetComment",
         "externalDocs": {
           "description": "API method documentation",
           "url": "https://docs.github.com/rest/issues/comments#get-an-issue-comment"
@@ -643,7 +643,7 @@
         "tags": [
           "reactions"
         ],
-        "operationId": "reactions/list-for-issue-comment",
+        "operationId": "reactionsListForIssueComment",
         "externalDocs": {
           "description": "API method documentation",
           "url": "https://docs.github.com/rest/reactions/reactions#list-reactions-for-an-issue-comment"
@@ -727,7 +727,7 @@
         "tags": [
           "issues"
         ],
-        "operationId": "issues/list-events-for-repo",
+        "operationId": "issuesListEventsForRepo",
         "externalDocs": {
           "description": "API method documentation",
           "url": "https://docs.github.com/rest/issues/events#list-issue-events-for-a-repository"
@@ -789,7 +789,7 @@
         "tags": [
           "issues"
         ],
-        "operationId": "issues/get-event",
+        "operationId": "issuesGetEvent",
         "externalDocs": {
           "description": "API method documentation",
           "url": "https://docs.github.com/rest/issues/events#get-an-issue-event"
@@ -851,7 +851,7 @@
         "tags": [
           "issues"
         ],
-        "operationId": "issues/get",
+        "operationId": "issuesGet",
         "externalDocs": {
           "description": "API method documentation",
           "url": "https://docs.github.com/rest/issues/issues#get-an-issue"
@@ -911,7 +911,7 @@
         "tags": [
           "issues"
         ],
-        "operationId": "issues/check-user-can-be-assigned-to-issue",
+        "operationId": "issuesCheckUserCanBeAssignedToIssue",
         "externalDocs": {
           "description": "API method documentation",
           "url": "https://docs.github.com/rest/issues/assignees#check-if-a-user-can-be-assigned-to-a-issue"
@@ -965,7 +965,7 @@
         "tags": [
           "issues"
         ],
-        "operationId": "issues/list-comments",
+        "operationId": "issuesListComments",
         "externalDocs": {
           "description": "API method documentation",
           "url": "https://docs.github.com/rest/issues/comments#list-issue-comments"
@@ -1036,7 +1036,7 @@
         "tags": [
           "issues"
         ],
-        "operationId": "issues/list-dependencies-blocked-by",
+        "operationId": "issuesListDependenciesBlockedBy",
         "externalDocs": {
           "description": "API method documentation",
           "url": "https://docs.github.com/rest/issues/issue-dependencies#list-dependencies-an-issue-is-blocked-by"
@@ -1107,7 +1107,7 @@
         "tags": [
           "issues"
         ],
-        "operationId": "issues/list-dependencies-blocking",
+        "operationId": "issuesListDependenciesBlocking",
         "externalDocs": {
           "description": "API method documentation",
           "url": "https://docs.github.com/rest/issues/issue-dependencies#list-dependencies-an-issue-is-blocking"
@@ -1178,7 +1178,7 @@
         "tags": [
           "issues"
         ],
-        "operationId": "issues/list-events",
+        "operationId": "issuesListEvents",
         "externalDocs": {
           "description": "API method documentation",
           "url": "https://docs.github.com/rest/issues/events#list-issue-events"
@@ -1243,7 +1243,7 @@
         "tags": [
           "issues"
         ],
-        "operationId": "issues/list-labels-on-issue",
+        "operationId": "issuesListLabelsOnIssue",
         "externalDocs": {
           "description": "API method documentation",
           "url": "https://docs.github.com/rest/issues/labels#list-labels-for-an-issue"
@@ -1314,7 +1314,7 @@
         "tags": [
           "issues"
         ],
-        "operationId": "issues/get-parent",
+        "operationId": "issuesGetParent",
         "externalDocs": {
           "description": "API method documentation",
           "url": "https://docs.github.com/rest/issues/sub-issues#get-parent-issue"
@@ -1371,7 +1371,7 @@
         "tags": [
           "reactions"
         ],
-        "operationId": "reactions/list-for-issue",
+        "operationId": "reactionsListForIssue",
         "externalDocs": {
           "description": "API method documentation",
           "url": "https://docs.github.com/rest/reactions/reactions#list-reactions-for-an-issue"
@@ -1458,7 +1458,7 @@
         "tags": [
           "issues"
         ],
-        "operationId": "issues/list-sub-issues",
+        "operationId": "issuesListSubIssues",
         "externalDocs": {
           "description": "API method documentation",
           "url": "https://docs.github.com/rest/issues/sub-issues#list-sub-issues"
@@ -1526,7 +1526,7 @@
         "tags": [
           "issues"
         ],
-        "operationId": "issues/list-events-for-timeline",
+        "operationId": "issuesListEventsForTimeline",
         "externalDocs": {
           "description": "API method documentation",
           "url": "https://docs.github.com/rest/issues/timeline#list-timeline-events-for-an-issue"
@@ -1594,7 +1594,7 @@
         "tags": [
           "search"
         ],
-        "operationId": "search/issues-and-pull-requests",
+        "operationId": "searchIssuesAndPullRequests",
         "externalDocs": {
           "description": "API method documentation",
           "url": "https://docs.github.com/rest/search/search#search-issues-and-pull-requests"
@@ -1707,7 +1707,7 @@
         "tags": [
           "issues"
         ],
-        "operationId": "issues/list-for-authenticated-user",
+        "operationId": "issuesListForAuthenticatedUser",
         "externalDocs": {
           "description": "API method documentation",
           "url": "https://docs.github.com/rest/issues/issues#list-user-account-issues-assigned-to-the-authenticated-user"
