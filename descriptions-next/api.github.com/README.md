@@ -4,7 +4,22 @@ This directory contains trimmed-down versions of the GitHub REST API OpenAPI sch
 
 ## Available Schemas
 
-### 1. Issues Only - `api.github.com.issues.json`
+### 1. Curated Essential - `api.github.com.curated.json` ⭐ **RECOMMENDED**
+**13 endpoints** for essential issue and PR operations
+
+- **Size**: 279 KB (97.5% reduction from full 11.35 MB schema)
+- **Focus**: Core operations - get issues/PRs, comments, reviews, search
+- **Components**: 66 schemas, parameters, responses, examples, headers
+- **Documentation**: [README.curated.md](README.curated.md)
+- **Perfect for**: ChatGPT actions, simple integrations, prototyping
+
+**Use Cases**:
+- **ChatGPT Actions** - Focused, essential operations
+- Simple issue/PR readers
+- Lightweight mobile apps
+- Quick prototypes and demos
+
+### 2. Issues Only - `api.github.com.issues.json`
 **22 endpoints** for GitHub Issues operations
 
 - **Size**: 300 KB (97.5% reduction from full 11.35 MB schema)
@@ -18,7 +33,7 @@ This directory contains trimmed-down versions of the GitHub REST API OpenAPI sch
 - Bug triage tools
 - Issue management assistants
 
-### 2. Pull Requests Only - `api.github.com.pulls.json`
+### 3. Pull Requests Only - `api.github.com.pulls.json`
 **15 endpoints** for GitHub Pull Requests operations
 
 - **Size**: 257 KB (97.7% reduction from full 11.35 MB schema)
@@ -32,7 +47,7 @@ This directory contains trimmed-down versions of the GitHub REST API OpenAPI sch
 - Review workflow automation
 - PR analytics and reporting
 
-### 3. Combined Issues + PRs - `api.github.com.issues-prs.json`
+### 4. Combined Issues + PRs - `api.github.com.issues-prs.json`
 **30 endpoints** (15 issues + 12 PRs + 3 search/repo endpoints)
 
 - **Size**: 453 KB (96.0% reduction from full 11.35 MB schema)
@@ -45,16 +60,17 @@ This directory contains trimmed-down versions of the GitHub REST API OpenAPI sch
 - Unified issue/PR management
 - Combined analytics
 - General GitHub repository insights
-- ChatGPT actions with both issue and PR access
+- Full-featured ChatGPT actions
 
 ## Schema Comparison
 
-| Schema | Endpoints | Issues | PRs | Size | Reduction |
-|--------|-----------|--------|-----|------|-----------|
-| **Issues Only** | 22 | 18 | 0 | 300 KB | 97.5% |
-| **PRs Only** | 15 | 0 | 12 | 257 KB | 97.7% |
-| **Combined** | 30 | 15 | 12 | 453 KB | 96.0% |
-| **Full Schema** | 721 | - | - | 11.35 MB | - |
+| Schema | Endpoints | Issues | PRs | Size | Reduction | Best For |
+|--------|-----------|--------|-----|------|-----------|----------|
+| **Curated** ⭐ | 13 | 5 | 7 | 279 KB | 97.5% | ChatGPT actions, simple integrations |
+| **Issues Only** | 22 | 18 | 0 | 300 KB | 97.5% | Dedicated issue tracking |
+| **PRs Only** | 15 | 0 | 12 | 257 KB | 97.7% | Code review tools |
+| **Combined** | 30 | 15 | 12 | 453 KB | 96.0% | Comprehensive coverage |
+| **Full Schema** | 721 | - | - | 11.35 MB | - | Complete API access |
 
 ## ChatGPT Action Optimizations
 
@@ -69,20 +85,26 @@ All schemas are fully optimized for ChatGPT actions:
 
 ## Which Schema Should You Use?
 
+**Choose Curated (`api.github.com.curated.json`) if you:** ⭐ **RECOMMENDED FOR CHATGPT**
+- Want the most essential operations only (13 endpoints)
+- Are building ChatGPT actions (well under 30-operation limit)
+- Need simple, focused functionality
+- Want quick setup with minimal complexity
+
 **Choose Issues Only (`api.github.com.issues.json`) if you:**
 - Only need issue-related operations
-- Want the smallest focused schema
-- Are building issue-specific tools
+- Want comprehensive issue features (22 endpoints)
+- Are building dedicated issue tracking tools
 
 **Choose PRs Only (`api.github.com.pulls.json`) if you:**
 - Only need pull request operations
 - Are building code review tools
-- Want PR-focused functionality
+- Want comprehensive PR features (15 endpoints)
 
 **Choose Combined (`api.github.com.issues-prs.json`) if you:**
-- Need both issues and PRs
+- Need both issues and PRs with more features
 - Are building comprehensive GitHub tools
-- Are using ChatGPT actions (stays within 30-operation limit)
+- Want maximum coverage within 30-operation limit
 
 ## Common Features
 
