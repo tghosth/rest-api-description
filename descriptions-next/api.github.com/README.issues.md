@@ -68,6 +68,7 @@ This schema is optimized for use as a ChatGPT action:
 - All operationIds use camelCase format (e.g., `issuesListForOrg`, `issuesGet`)
 - OperationIds are valid identifiers containing only alphanumeric characters
 - No special characters (slashes, hyphens) that might cause issues with tool ID mapping
+- All operation descriptions are truncated to 300 characters maximum (ChatGPT action limit)
 
 ### Usage
 
