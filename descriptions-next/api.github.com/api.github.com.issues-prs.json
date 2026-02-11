@@ -11307,7 +11307,6 @@
       "timeline-issue-events": {
         "title": "Timeline Event",
         "description": "Timeline Event",
-        "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/labeled-issue-event"
