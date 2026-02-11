@@ -72,7 +72,13 @@
             }
           },
           {
-            "$ref": "#/components/parameters/labels"
+            "name": "labels",
+            "description": "A list of comma separated label names. Example: `bug,ui,@high`",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
           },
           {
             "name": "sort",
@@ -90,10 +96,28 @@
             }
           },
           {
-            "$ref": "#/components/parameters/direction"
+            "name": "direction",
+            "description": "The direction to sort the results by.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "asc",
+                "desc"
+              ],
+              "default": "desc"
+            }
           },
           {
-            "$ref": "#/components/parameters/since"
+            "name": "since",
+            "description": "Only show results that were last updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
           },
           {
             "name": "collab",
@@ -128,10 +152,22 @@
             }
           },
           {
-            "$ref": "#/components/parameters/per-page"
+            "name": "per_page",
+            "description": "The number of results per page (max 100). For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 30
+            }
           },
           {
-            "$ref": "#/components/parameters/page"
+            "name": "page",
+            "description": "The page number of the results to fetch. For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 1
+            }
           }
         ],
         "responses": {
@@ -190,7 +226,13 @@
         },
         "parameters": [
           {
-            "$ref": "#/components/parameters/org"
+            "name": "org",
+            "description": "The organization name. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -238,7 +280,13 @@
         },
         "parameters": [
           {
-            "$ref": "#/components/parameters/org"
+            "name": "org",
+            "description": "The organization name. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
             "name": "filter",
@@ -274,7 +322,13 @@
             }
           },
           {
-            "$ref": "#/components/parameters/labels"
+            "name": "labels",
+            "description": "A list of comma separated label names. Example: `bug,ui,@high`",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
           },
           {
             "name": "type",
@@ -301,16 +355,46 @@
             }
           },
           {
-            "$ref": "#/components/parameters/direction"
+            "name": "direction",
+            "description": "The direction to sort the results by.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "asc",
+                "desc"
+              ],
+              "default": "desc"
+            }
           },
           {
-            "$ref": "#/components/parameters/since"
+            "name": "since",
+            "description": "Only show results that were last updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
           },
           {
-            "$ref": "#/components/parameters/per-page"
+            "name": "per_page",
+            "description": "The number of results per page (max 100). For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 30
+            }
           },
           {
-            "$ref": "#/components/parameters/page"
+            "name": "page",
+            "description": "The page number of the results to fetch. For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 1
+            }
           }
         ],
         "responses": {
@@ -363,10 +447,22 @@
         },
         "parameters": [
           {
-            "$ref": "#/components/parameters/owner"
+            "name": "owner",
+            "description": "The account owner of the repository. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/repo"
+            "name": "repo",
+            "description": "The name of the repository without the `.git` extension. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
             "name": "milestone",
@@ -429,7 +525,13 @@
             }
           },
           {
-            "$ref": "#/components/parameters/labels"
+            "name": "labels",
+            "description": "A list of comma separated label names. Example: `bug,ui,@high`",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
           },
           {
             "name": "sort",
@@ -447,16 +549,46 @@
             }
           },
           {
-            "$ref": "#/components/parameters/direction"
+            "name": "direction",
+            "description": "The direction to sort the results by.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "asc",
+                "desc"
+              ],
+              "default": "desc"
+            }
           },
           {
-            "$ref": "#/components/parameters/since"
+            "name": "since",
+            "description": "Only show results that were last updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
           },
           {
-            "$ref": "#/components/parameters/per-page"
+            "name": "per_page",
+            "description": "The number of results per page (max 100). For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 30
+            }
           },
           {
-            "$ref": "#/components/parameters/page"
+            "name": "page",
+            "description": "The page number of the results to fetch. For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 1
+            }
           }
         ],
         "responses": {
@@ -515,13 +647,36 @@
         },
         "parameters": [
           {
-            "$ref": "#/components/parameters/owner"
+            "name": "owner",
+            "description": "The account owner of the repository. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/repo"
+            "name": "repo",
+            "description": "The name of the repository without the `.git` extension. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/sort"
+            "name": "sort",
+            "description": "The property to sort the results by.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "created",
+                "updated"
+              ],
+              "default": "created"
+            }
           },
           {
             "name": "direction",
@@ -537,13 +692,32 @@
             }
           },
           {
-            "$ref": "#/components/parameters/since"
+            "name": "since",
+            "description": "Only show results that were last updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
           },
           {
-            "$ref": "#/components/parameters/per-page"
+            "name": "per_page",
+            "description": "The number of results per page (max 100). For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 30
+            }
           },
           {
-            "$ref": "#/components/parameters/page"
+            "name": "page",
+            "description": "The page number of the results to fetch. For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 1
+            }
           }
         ],
         "responses": {
@@ -599,13 +773,32 @@
         },
         "parameters": [
           {
-            "$ref": "#/components/parameters/owner"
+            "name": "owner",
+            "description": "The account owner of the repository. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/repo"
+            "name": "repo",
+            "description": "The name of the repository without the `.git` extension. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/comment-id"
+            "name": "comment_id",
+            "description": "The unique identifier of the comment.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
           }
         ],
         "responses": {
@@ -650,13 +843,32 @@
         },
         "parameters": [
           {
-            "$ref": "#/components/parameters/owner"
+            "name": "owner",
+            "description": "The account owner of the repository. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/repo"
+            "name": "repo",
+            "description": "The name of the repository without the `.git` extension. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/comment-id"
+            "name": "comment_id",
+            "description": "The unique identifier of the comment.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
           },
           {
             "name": "content",
@@ -678,10 +890,22 @@
             }
           },
           {
-            "$ref": "#/components/parameters/per-page"
+            "name": "per_page",
+            "description": "The number of results per page (max 100). For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 30
+            }
           },
           {
-            "$ref": "#/components/parameters/page"
+            "name": "page",
+            "description": "The page number of the results to fetch. For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 1
+            }
           }
         ],
         "responses": {
@@ -734,16 +958,40 @@
         },
         "parameters": [
           {
-            "$ref": "#/components/parameters/owner"
+            "name": "owner",
+            "description": "The account owner of the repository. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/repo"
+            "name": "repo",
+            "description": "The name of the repository without the `.git` extension. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/per-page"
+            "name": "per_page",
+            "description": "The number of results per page (max 100). For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 30
+            }
           },
           {
-            "$ref": "#/components/parameters/page"
+            "name": "page",
+            "description": "The page number of the results to fetch. For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 1
+            }
           }
         ],
         "responses": {
@@ -796,10 +1044,22 @@
         },
         "parameters": [
           {
-            "$ref": "#/components/parameters/owner"
+            "name": "owner",
+            "description": "The account owner of the repository. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/repo"
+            "name": "repo",
+            "description": "The name of the repository without the `.git` extension. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
             "name": "event_id",
@@ -858,13 +1118,31 @@
         },
         "parameters": [
           {
-            "$ref": "#/components/parameters/owner"
+            "name": "owner",
+            "description": "The account owner of the repository. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/repo"
+            "name": "repo",
+            "description": "The name of the repository without the `.git` extension. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/issue-number"
+            "name": "issue_number",
+            "description": "The number that identifies the issue.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
           }
         ],
         "responses": {
@@ -918,13 +1196,31 @@
         },
         "parameters": [
           {
-            "$ref": "#/components/parameters/owner"
+            "name": "owner",
+            "description": "The account owner of the repository. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/repo"
+            "name": "repo",
+            "description": "The name of the repository without the `.git` extension. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/issue-number"
+            "name": "issue_number",
+            "description": "The number that identifies the issue.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
           },
           {
             "name": "assignee",
@@ -972,22 +1268,59 @@
         },
         "parameters": [
           {
-            "$ref": "#/components/parameters/owner"
+            "name": "owner",
+            "description": "The account owner of the repository. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/repo"
+            "name": "repo",
+            "description": "The name of the repository without the `.git` extension. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/issue-number"
+            "name": "issue_number",
+            "description": "The number that identifies the issue.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
           },
           {
-            "$ref": "#/components/parameters/since"
+            "name": "since",
+            "description": "Only show results that were last updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
           },
           {
-            "$ref": "#/components/parameters/per-page"
+            "name": "per_page",
+            "description": "The number of results per page (max 100). For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 30
+            }
           },
           {
-            "$ref": "#/components/parameters/page"
+            "name": "page",
+            "description": "The page number of the results to fetch. For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 1
+            }
           }
         ],
         "responses": {
@@ -1043,19 +1376,49 @@
         },
         "parameters": [
           {
-            "$ref": "#/components/parameters/owner"
+            "name": "owner",
+            "description": "The account owner of the repository. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/repo"
+            "name": "repo",
+            "description": "The name of the repository without the `.git` extension. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/issue-number"
+            "name": "issue_number",
+            "description": "The number that identifies the issue.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
           },
           {
-            "$ref": "#/components/parameters/per-page"
+            "name": "per_page",
+            "description": "The number of results per page (max 100). For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 30
+            }
           },
           {
-            "$ref": "#/components/parameters/page"
+            "name": "page",
+            "description": "The page number of the results to fetch. For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 1
+            }
           }
         ],
         "responses": {
@@ -1114,19 +1477,49 @@
         },
         "parameters": [
           {
-            "$ref": "#/components/parameters/owner"
+            "name": "owner",
+            "description": "The account owner of the repository. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/repo"
+            "name": "repo",
+            "description": "The name of the repository without the `.git` extension. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/issue-number"
+            "name": "issue_number",
+            "description": "The number that identifies the issue.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
           },
           {
-            "$ref": "#/components/parameters/per-page"
+            "name": "per_page",
+            "description": "The number of results per page (max 100). For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 30
+            }
           },
           {
-            "$ref": "#/components/parameters/page"
+            "name": "page",
+            "description": "The page number of the results to fetch. For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 1
+            }
           }
         ],
         "responses": {
@@ -1185,19 +1578,49 @@
         },
         "parameters": [
           {
-            "$ref": "#/components/parameters/owner"
+            "name": "owner",
+            "description": "The account owner of the repository. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/repo"
+            "name": "repo",
+            "description": "The name of the repository without the `.git` extension. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/issue-number"
+            "name": "issue_number",
+            "description": "The number that identifies the issue.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
           },
           {
-            "$ref": "#/components/parameters/per-page"
+            "name": "per_page",
+            "description": "The number of results per page (max 100). For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 30
+            }
           },
           {
-            "$ref": "#/components/parameters/page"
+            "name": "page",
+            "description": "The page number of the results to fetch. For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 1
+            }
           }
         ],
         "responses": {
@@ -1250,19 +1673,49 @@
         },
         "parameters": [
           {
-            "$ref": "#/components/parameters/owner"
+            "name": "owner",
+            "description": "The account owner of the repository. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/repo"
+            "name": "repo",
+            "description": "The name of the repository without the `.git` extension. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/issue-number"
+            "name": "issue_number",
+            "description": "The number that identifies the issue.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
           },
           {
-            "$ref": "#/components/parameters/per-page"
+            "name": "per_page",
+            "description": "The number of results per page (max 100). For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 30
+            }
           },
           {
-            "$ref": "#/components/parameters/page"
+            "name": "page",
+            "description": "The page number of the results to fetch. For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 1
+            }
           }
         ],
         "responses": {
@@ -1321,13 +1774,31 @@
         },
         "parameters": [
           {
-            "$ref": "#/components/parameters/owner"
+            "name": "owner",
+            "description": "The account owner of the repository. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/repo"
+            "name": "repo",
+            "description": "The name of the repository without the `.git` extension. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/issue-number"
+            "name": "issue_number",
+            "description": "The number that identifies the issue.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
           }
         ],
         "responses": {
@@ -1378,13 +1849,31 @@
         },
         "parameters": [
           {
-            "$ref": "#/components/parameters/owner"
+            "name": "owner",
+            "description": "The account owner of the repository. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/repo"
+            "name": "repo",
+            "description": "The name of the repository without the `.git` extension. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/issue-number"
+            "name": "issue_number",
+            "description": "The number that identifies the issue.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
           },
           {
             "name": "content",
@@ -1406,10 +1895,22 @@
             }
           },
           {
-            "$ref": "#/components/parameters/per-page"
+            "name": "per_page",
+            "description": "The number of results per page (max 100). For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 30
+            }
           },
           {
-            "$ref": "#/components/parameters/page"
+            "name": "page",
+            "description": "The page number of the results to fetch. For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 1
+            }
           }
         ],
         "responses": {
@@ -1465,19 +1966,49 @@
         },
         "parameters": [
           {
-            "$ref": "#/components/parameters/owner"
+            "name": "owner",
+            "description": "The account owner of the repository. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/repo"
+            "name": "repo",
+            "description": "The name of the repository without the `.git` extension. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/issue-number"
+            "name": "issue_number",
+            "description": "The number that identifies the issue.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
           },
           {
-            "$ref": "#/components/parameters/per-page"
+            "name": "per_page",
+            "description": "The number of results per page (max 100). For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 30
+            }
           },
           {
-            "$ref": "#/components/parameters/page"
+            "name": "page",
+            "description": "The page number of the results to fetch. For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 1
+            }
           }
         ],
         "responses": {
@@ -1533,19 +2064,49 @@
         },
         "parameters": [
           {
-            "$ref": "#/components/parameters/owner"
+            "name": "owner",
+            "description": "The account owner of the repository. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/repo"
+            "name": "repo",
+            "description": "The name of the repository without the `.git` extension. The name is not case sensitive.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/parameters/issue-number"
+            "name": "issue_number",
+            "description": "The number that identifies the issue.",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
           },
           {
-            "$ref": "#/components/parameters/per-page"
+            "name": "per_page",
+            "description": "The number of results per page (max 100). For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 30
+            }
           },
           {
-            "$ref": "#/components/parameters/page"
+            "name": "page",
+            "description": "The page number of the results to fetch. For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 1
+            }
           }
         ],
         "responses": {
@@ -1632,16 +2193,45 @@
             }
           },
           {
-            "$ref": "#/components/parameters/order"
+            "name": "order",
+            "description": "Determines whether the first search result returned is the highest number of matches (`desc`) or lowest number of matches (`asc`). This parameter is ignored unless you provide `sort`.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "desc",
+                "asc"
+              ],
+              "default": "desc"
+            }
           },
           {
-            "$ref": "#/components/parameters/per-page"
+            "name": "per_page",
+            "description": "The number of results per page (max 100). For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 30
+            }
           },
           {
-            "$ref": "#/components/parameters/page"
+            "name": "page",
+            "description": "The page number of the results to fetch. For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 1
+            }
           },
           {
-            "$ref": "#/components/parameters/issues-advanced-search"
+            "name": "advanced_search",
+            "description": "Set to `true` to use advanced search.\nExample: `http://api.github.com/search/issues?q={query}&advanced_search=true`",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -1747,7 +2337,13 @@
             }
           },
           {
-            "$ref": "#/components/parameters/labels"
+            "name": "labels",
+            "description": "A list of comma separated label names. Example: `bug,ui,@high`",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
           },
           {
             "name": "sort",
@@ -1765,16 +2361,46 @@
             }
           },
           {
-            "$ref": "#/components/parameters/direction"
+            "name": "direction",
+            "description": "The direction to sort the results by.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "asc",
+                "desc"
+              ],
+              "default": "desc"
+            }
           },
           {
-            "$ref": "#/components/parameters/since"
+            "name": "since",
+            "description": "Only show results that were last updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
           },
           {
-            "$ref": "#/components/parameters/per-page"
+            "name": "per_page",
+            "description": "The number of results per page (max 100). For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 30
+            }
           },
           {
-            "$ref": "#/components/parameters/page"
+            "name": "page",
+            "description": "The page number of the results to fetch. For more information, see \"[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api).\"",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 1
+            }
           }
         ],
         "responses": {
