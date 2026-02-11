@@ -454,7 +454,7 @@
     "/search/issues": {
       "get": {
         "summary": "Search issues and pull requests",
-        "description": "Find issues by state and keyword. This method returns up to 100 results per page. Note that this endpoint searches issues and PRs together by default so this does not need to be specified. If focusing on pull requests, use is:pr. Avoid surrounding search terms in quotes unless specifically requested",
+        "description": "Find issues by state and keyword. This method returns up to 100 results per page. Query must include either 'is:issue' or 'is:pull-request' but using OR will not work so if you need both then do two queries. Avoid surrounding search terms in quotes unless specifically requested",
         "tags": [
           "search"
         ],
