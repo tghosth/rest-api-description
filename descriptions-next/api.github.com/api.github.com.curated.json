@@ -454,7 +454,7 @@
     "/search/issues": {
       "get": {
         "summary": "Search issues and pull requests",
-        "description": "Find issues by state and keyword. This method returns up to 100 results [per page](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api).",
+        "description": "Find issues by state and keyword. This method returns up to 100 results per page. Note that this endpoint searches issues and PRs together by default so this does not need to be specified. If focusing on pull requests, use is:pr. Avoid surrounding search terms in quotes unless specifically requested",
         "tags": [
           "search"
         ],
